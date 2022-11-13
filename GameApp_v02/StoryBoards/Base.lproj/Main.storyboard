@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7k9-cX-wG4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pVh-9b-Pk1">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,9 +12,9 @@
         <!--Do you have ... ?-->
         <scene sceneID="4We-kB-M5w">
             <objects>
-                <tableViewController id="b9E-0R-YHR" customClass="CardsTableViewController" customModule="GameApp_v02" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController modalPresentationStyle="fullScreen" id="b9E-0R-YHR" customClass="CardsTableViewController" customModule="GameApp_v02" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Eyc-Ee-6hJ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
@@ -38,16 +39,55 @@
                             <outlet property="delegate" destination="b9E-0R-YHR" id="h9P-p8-D8w"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Do you have ... ?" id="HXn-yF-5x9"/>
+                    <navigationItem key="navigationItem" title="Do you have ... ?" id="HXn-yF-5x9">
+                        <rightBarButtonItems>
+                            <barButtonItem title="NO" id="Nlm-KK-d7U">
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                            </barButtonItem>
+                            <barButtonItem title="YES" id="XEC-nl-oWf">
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UMm-WP-eew" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="589" y="-136"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="jPm-XP-U7k">
+            <objects>
+                <viewController id="pVh-9b-Pk1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mZv-mM-C8K">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cI8-L6-vUA">
+                                <rect key="frame" x="122" y="266.5" width="76" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="START"/>
+                                <connections>
+                                    <segue destination="7k9-cX-wG4" kind="show" id="EPj-T4-CsR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="d2t-sx-M1n"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cI8-L6-vUA" firstAttribute="centerY" secondItem="mZv-mM-C8K" secondAttribute="centerY" id="Ln5-97-vyH"/>
+                            <constraint firstItem="cI8-L6-vUA" firstAttribute="centerX" secondItem="mZv-mM-C8K" secondAttribute="centerX" id="k8Q-9A-SYv"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VAm-At-jTm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-996" y="-136"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Epq-PZ-Nv2">
             <objects>
-                <navigationController id="7k9-cX-wG4" sceneMemberID="viewController">
+                <navigationController modalPresentationStyle="fullScreen" id="7k9-cX-wG4" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="zEc-Jr-Wjw"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="aHA-Bj-d03">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="92.5"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -64,6 +104,12 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
