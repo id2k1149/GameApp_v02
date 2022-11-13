@@ -8,6 +8,8 @@
 import UIKit
 
 class CardsTableViewController: UITableViewController {
+    
+    var players: [Player]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,8 +17,14 @@ class CardsTableViewController: UITableViewController {
 
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
-        10
+        //        players.count
+        2
+        
     }
+    
+//    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        players[section].name
+//    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         3

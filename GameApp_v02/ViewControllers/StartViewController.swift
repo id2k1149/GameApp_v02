@@ -10,11 +10,13 @@ import UIKit
 class StartViewController: UIViewController {
 
     @IBOutlet var playersNumberLabel: UITextField!
+    @IBOutlet var startButtonLabel: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        startButtonLabel.layer.cornerRadius = 10
+        
     }
     
     @IBAction func startButtonTapped() {

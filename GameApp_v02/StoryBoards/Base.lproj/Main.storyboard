@@ -29,10 +29,16 @@
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cI8-L6-vUA">
-                                <rect key="frame" x="123" y="263" width="74" height="42"/>
+                                <rect key="frame" x="62" y="259.5" width="196" height="42"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="196" id="lbk-kF-pSw"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="START"/>
+                                <state key="normal" title="START GAME">
+                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                </state>
                                 <connections>
                                     <action selector="startButtonTapped" destination="pVh-9b-Pk1" eventType="touchUpInside" id="Wc1-aH-N0M"/>
                                     <segue destination="Tel-1P-HSs" kind="presentation" id="8Yo-5v-s82"/>
@@ -44,21 +50,22 @@
                         <constraints>
                             <constraint firstItem="L5n-Vh-Hvr" firstAttribute="leading" secondItem="d2t-sx-M1n" secondAttribute="leading" constant="16" id="3eM-cA-6eE"/>
                             <constraint firstItem="Kac-Xa-mUa" firstAttribute="top" secondItem="d2t-sx-M1n" secondAttribute="top" constant="100" id="B5d-CE-dA6"/>
+                            <constraint firstItem="cI8-L6-vUA" firstAttribute="centerX" secondItem="mZv-mM-C8K" secondAttribute="centerX" id="BFu-2n-y4J"/>
                             <constraint firstItem="d2t-sx-M1n" firstAttribute="trailing" secondItem="Kac-Xa-mUa" secondAttribute="trailing" constant="130" id="Ibp-rL-PfK"/>
-                            <constraint firstItem="cI8-L6-vUA" firstAttribute="centerY" secondItem="mZv-mM-C8K" secondAttribute="centerY" id="Ln5-97-vyH"/>
                             <constraint firstItem="d2t-sx-M1n" firstAttribute="trailing" secondItem="L5n-Vh-Hvr" secondAttribute="trailing" constant="16" id="Qck-l0-jbU"/>
-                            <constraint firstItem="cI8-L6-vUA" firstAttribute="centerX" secondItem="mZv-mM-C8K" secondAttribute="centerX" id="k8Q-9A-SYv"/>
+                            <constraint firstItem="cI8-L6-vUA" firstAttribute="top" secondItem="Kac-Xa-mUa" secondAttribute="bottom" constant="120" id="g7v-ah-dJ7"/>
                             <constraint firstItem="Kac-Xa-mUa" firstAttribute="leading" secondItem="d2t-sx-M1n" secondAttribute="leading" constant="130" id="uEa-aX-V7i"/>
                             <constraint firstItem="L5n-Vh-Hvr" firstAttribute="top" secondItem="d2t-sx-M1n" secondAttribute="top" constant="70" id="uhn-8a-e7p"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="playersNumberLabel" destination="Kac-Xa-mUa" id="hZw-k1-Quq"/>
+                        <outlet property="startButtonLabel" destination="cI8-L6-vUA" id="vM6-dX-uwU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VAm-At-jTm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-996" y="-136"/>
+            <point key="canvasLocation" x="-997.5" y="-136.26760563380282"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nsv-PZ-xPY">
@@ -85,11 +92,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="gameBoard" id="ajk-uw-wez">
-                                <rect key="frame" x="0.0" y="50" width="320" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="gameBoard" rowHeight="54" id="ajk-uw-wez">
+                                <rect key="frame" x="0.0" y="50" width="320" height="54"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ajk-uw-wez" id="dBy-O6-Zwx">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="54"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -113,12 +120,15 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nvb-dm-Nfr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="561" y="-137"/>
+            <point key="canvasLocation" x="560.625" y="-137.32394366197184"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
