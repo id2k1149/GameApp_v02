@@ -56,15 +56,39 @@
 		5070C4D929207BA5005485DB /* GameApp_v02 */ = {
 			isa = PBXGroup;
 			children = (
-				5070C4DA29207BA5005485DB /* AppDelegate.swift */,
-				5070C4DC29207BA5005485DB /* SceneDelegate.swift */,
-				5070C4DE29207BA5005485DB /* ViewController.swift */,
-				5070C4E029207BA5005485DB /* Main.storyboard */,
+				5070C4EE29207C13005485DB /* Delegates */,
+				5070C4EF29207C28005485DB /* ViewControllers */,
+				5070C4F029207C4C005485DB /* StoryBoards */,
 				5070C4E329207BA7005485DB /* Assets.xcassets */,
-				5070C4E529207BA7005485DB /* LaunchScreen.storyboard */,
 				5070C4E829207BA7005485DB /* Info.plist */,
 			);
 			path = GameApp_v02;
+			sourceTree = "<group>";
+		};
+		5070C4EE29207C13005485DB /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				5070C4DA29207BA5005485DB /* AppDelegate.swift */,
+				5070C4DC29207BA5005485DB /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		5070C4EF29207C28005485DB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5070C4DE29207BA5005485DB /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5070C4F029207C4C005485DB /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				5070C4E029207BA5005485DB /* Main.storyboard */,
+				5070C4E529207BA7005485DB /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
