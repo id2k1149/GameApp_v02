@@ -13,6 +13,10 @@
 		5070C4E229207BA5005485DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5070C4E029207BA5005485DB /* Main.storyboard */; };
 		5070C4E429207BA7005485DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5070C4E329207BA7005485DB /* Assets.xcassets */; };
 		5070C4E729207BA7005485DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5070C4E529207BA7005485DB /* LaunchScreen.storyboard */; };
+		50C766EF29212CD400A58124 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C766EE29212CD400A58124 /* StartViewController.swift */; };
+		50C766F229212FAF00A58124 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C766F129212FAF00A58124 /* Player.swift */; };
+		50C766F429212FD500A58124 /* Bag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C766F329212FD500A58124 /* Bag.swift */; };
+		50C766F62921301C00A58124 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C766F52921301C00A58124 /* Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		5070C4E329207BA7005485DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5070C4E629207BA7005485DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5070C4E829207BA7005485DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50C766EE29212CD400A58124 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		50C766F129212FAF00A58124 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		50C766F329212FD500A58124 /* Bag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bag.swift; sourceTree = "<group>"; };
+		50C766F52921301C00A58124 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +64,10 @@
 		5070C4D929207BA5005485DB /* GameApp_v02 */ = {
 			isa = PBXGroup;
 			children = (
-				5070C4EE29207C13005485DB /* Delegates */,
+				50C766F029212F2700A58124 /* Models */,
 				5070C4EF29207C28005485DB /* ViewControllers */,
 				5070C4F029207C4C005485DB /* StoryBoards */,
+				5070C4EE29207C13005485DB /* Delegates */,
 				5070C4E329207BA7005485DB /* Assets.xcassets */,
 				5070C4E829207BA7005485DB /* Info.plist */,
 			);
@@ -77,6 +86,7 @@
 		5070C4EF29207C28005485DB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				50C766EE29212CD400A58124 /* StartViewController.swift */,
 				5011371729207E5800C79AE9 /* CardsTableViewController.swift */,
 			);
 			path = ViewControllers;
@@ -89,6 +99,16 @@
 				5070C4E529207BA7005485DB /* LaunchScreen.storyboard */,
 			);
 			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		50C766F029212F2700A58124 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				50C766F329212FD500A58124 /* Bag.swift */,
+				50C766F52921301C00A58124 /* Card.swift */,
+				50C766F129212FAF00A58124 /* Player.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,7 +183,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5011371829207E5800C79AE9 /* CardsTableViewController.swift in Sources */,
+				50C766EF29212CD400A58124 /* StartViewController.swift in Sources */,
+				50C766F62921301C00A58124 /* Card.swift in Sources */,
 				5070C4DB29207BA5005485DB /* AppDelegate.swift in Sources */,
+				50C766F229212FAF00A58124 /* Player.swift in Sources */,
+				50C766F429212FD500A58124 /* Bag.swift in Sources */,
 				5070C4DD29207BA5005485DB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
