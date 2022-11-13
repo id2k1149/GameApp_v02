@@ -40,10 +40,10 @@ class Player {
 }
 
 extension Player {
-    static func getPlayersList() -> [Player] {
+    static func getPlayersList(number: Int) -> [Player] {
         var players: [Player] = []
         
-        for count in 0...2 {
+        for count in 0..<number {
             switch count {
             case 0:
                 let player = Player(isHumam: true)

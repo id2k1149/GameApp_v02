@@ -18,7 +18,12 @@ class StartViewController: UIViewController {
     }
     
     @IBAction func startButtonTapped() {
-        let playersNumber = playersNumberLabel.text
+        let playersNumber = Int(playersNumberLabel.text ?? "") ?? 2
+        let players = Player.getPlayersList(number: playersNumber)
+        players.forEach {
+            print($0.name ?? "?")
+        }
+        
         
     }
     
