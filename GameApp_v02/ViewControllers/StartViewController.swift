@@ -9,7 +9,7 @@ import UIKit
 
 class StartViewController: UIViewController {
 
-    @IBOutlet var playersNumberLabel: UITextField!
+    @IBOutlet var playersNumberTextField: UITextField!
     @IBOutlet var startButtonLabel: UIButton!
     
     override func viewDidLoad() {
@@ -20,7 +20,13 @@ class StartViewController: UIViewController {
     }
     
     @IBAction func startButtonTapped() {
-        let playersNumber = Int(playersNumberLabel.text ?? "") ?? 2
+        guard let inputText = playersNumberTextField.text, !inputText.isEmpty else {
+            showAlert(with: "Text field is empty", and: "Plese enter some number")
+            return
+        }
+        
+        
+        let playersNumber = Int(inputText) ?? 2
         let players = Player.getPlayersList(number: playersNumber)
         players.forEach {
             print($0.name ?? "?")
@@ -39,4 +45,16 @@ class StartViewController: UIViewController {
     }
     */
 
+}
+
+// MARK: - UIAlertController
+extension StartViewController {
+    private func showAlert(with title: String, and message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            self.playersNumberTextField.text = ""
+        }
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
 }
